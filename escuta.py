@@ -57,7 +57,7 @@ def main():
 
     # ouvir
     r = sr.Recognizer()
-    mic = sr.Microphone()
+    mic = sr.Microphone(0)
     def falar(texto, voz_escolhida = 0):
         engine.setProperty('voice', voices[voz_escolhida].id)
         # falando
@@ -126,12 +126,14 @@ def main():
                 if (assistente_falante):
                     falar("Vai ligar", voz)
                 if com_arduino:
-                    board.digital[pino].write(1)
+                    pass
+                    # board.digital[pino].write(1)
             elif comando_recebido in comando2:
                 if (assistente_falante):
                     falar("Vai Desligar", voz)
                 if com_arduino:
-                    board.digital[pino].write(0)
+                    pass
+                    # board.digital[pino].write(0)
 
 
 if __name__ == '__main__':

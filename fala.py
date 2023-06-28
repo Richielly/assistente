@@ -22,7 +22,7 @@ def main(text):
     # falar
     engine = pyttsx3.init()
     voices = engine.getProperty('voices')
-    engine.setProperty('rate', 180) # velocidade 120 = lento
+    engine.setProperty('rate', 235) # velocidade 120 = lento
     for indice, vozes in enumerate(voices): # listar vozes
         print(indice, vozes.name)
     print("Voz escolhida", voz, voices[voz].name)
